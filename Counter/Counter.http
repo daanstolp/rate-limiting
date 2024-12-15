@@ -1,0 +1,6 @@
+@Counter_HostAddress = http://localhost:5077
+
+GET {{Counter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
