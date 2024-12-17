@@ -34,6 +34,10 @@ public class RequestCounter
 
     public double RequestsPerSecond()
     {
+        if (_requests.Count < 2)
+        {
+            return 0;
+        }
         var elapsedTime = _requests.Last() - _requests.First();
         return TotalRequests / elapsedTime.TotalSeconds;
     }
